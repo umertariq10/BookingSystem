@@ -1,0 +1,25 @@
+<button mat-button [matMenuTriggerFor]="menu">
+  <mat-icon>add_shopping_cart</mat-icon>
+  Cart
+</button>
+<mat-menu  #menu="matMenu">
+  <span class="cart" *ngIf="!items?.length">Cart is Empty</span>
+  <div class="cart"
+         *ngFor="let item of items" >
+ <span  class="cart_items">
+  <img class='cart_items_image clickable' [src]=item.imageUrl (click)="openImagePreview(item)">
+   <span class="cart_items_text">{{item.itemName}}</span>
+  <app-item-quantity class='cart_items_item-quantity' [item]="item" [itemList]="items"></app-item-quantity>
+   <span>{{totalPriceForSingleItem(item) | currency:'EUR'}}</span>
+   <button class=" material-icons cart_items_delete" (click)="deleteItemFromCart(item);$event.stopPropagation()">close</button>
+  </span>
+  </div>
+  <mat-divider></mat-divider>
+  <div *ngIf="items?.length">
+  <span class="cart"> Total Items</span>
+<span > {{totalItemsInCart()}}</span>
+  <mat-divider></mat-divider>
+  <span class="cart"> Total Price</span>
+  <span> {{totalPriceForAllItems(items) | currency:'EUR'}}</span>
+    </div>
+</mat-menu>

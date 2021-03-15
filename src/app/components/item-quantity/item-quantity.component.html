@@ -1,0 +1,5 @@
+
+<button class="decrease clickable" [disabled]="item.quantity===1"  (click)="$event.stopPropagation();decreaseItem()">-</button>
+<span>{{item.quantity}}</span>
+<button class="increase clickable" (click)="$event.stopPropagation();  increaseItem()">+</button>
+

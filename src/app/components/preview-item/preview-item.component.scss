@@ -1,0 +1,19 @@
+.frame{
+  &__image{
+    opacity: 1;
+    width: 50%;
+    height: 50%;
+    transition: .5s ease;
+    backface-visibility: hidden;
+  }
+  &__close-icon {
+
+    float: right;
+    padding: 5px;
+    line-height: 14px;
+    min-width: auto;
+    border-radius: 5px;
+    background-color: darkgray;
+    cursor: pointer;
+  }
+}

@@ -16,7 +16,7 @@ export class ItemService {
 
 /*setting the items of all categories*/
   setItem(item: Item): void {
-    this.items = this.items.length === 0 ? [...this.items, item ] : this.updateQuantity(item);
+    this.items = this.isItemExsistInCart(item) ? [...this.items, item ] : this.updateQuantity(item);
     this.item.next(this.items);
     this.updateLocalStorage();
   }

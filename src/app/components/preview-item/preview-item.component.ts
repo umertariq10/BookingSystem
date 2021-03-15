@@ -1,5 +1,6 @@
 import { Component, Inject, OnInit } from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
+import { Item } from '../../models/item.model';
 
 @Component({
   selector: 'app-preview-item',
@@ -7,9 +8,9 @@ import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
   styleUrls: ['./preview-item.component.scss']
 })
 export class PreviewItemComponent implements OnInit {
-imageUrl: any;
+item!: Item;
   constructor(@Inject(MAT_DIALOG_DATA) public data: any, private dialogRef: MatDialogRef<PreviewItemComponent>) {
-    this.imageUrl = data.imageUrl;
+    this.item = data;
   }
 
   ngOnInit(): void {

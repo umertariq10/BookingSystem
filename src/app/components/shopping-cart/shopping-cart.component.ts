@@ -25,8 +25,8 @@ export class ShoppingCartComponent implements OnInit {
     this.cartService.deleteItemFromCart(item, this.items);
   }
 
-  openImagePreview(image: any): void {
-    this.dialog.open(PreviewItemComponent, { data: { imageUrl: image } });
+  openImagePreview(item: Item): void {
+    this.dialog.open(PreviewItemComponent, { data: item });
   }
 
   totalItemsInCart(): number{

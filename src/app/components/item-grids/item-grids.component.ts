@@ -24,14 +24,12 @@ export class ItemGridsComponent implements OnInit {
   ngOnInit(): void {
   }
 
- openImagePreview(image: any): void{
-    this.dialog.open(PreviewItemComponent, {data: {imageUrl: image}});
+ openImagePreview(item: Item): void{
+    this.dialog.open(PreviewItemComponent, {data: item});
 }
  addItemToCart(image: Item): void{
     this.itemService.setItem(image);
     this.openSnackBar(image.itemName + ' is added to cart' , 'Continue');
-    /*this.snackBar.openFromComponent(NotificationComponent, {
-   data: image.itemName + ' is added to cart'});*/
  }
 
   openSnackBar(message: string, action: string): void {

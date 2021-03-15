@@ -9,7 +9,7 @@ import { ItemService } from '../../service/item.service';
 })
 export class ItemQuantityComponent implements OnInit {
   @Input() item!: Item;
-  @Input() itemList: any;
+  @Input() itemList!: Item[];
 
   constructor(private itemService: ItemService) {
   }

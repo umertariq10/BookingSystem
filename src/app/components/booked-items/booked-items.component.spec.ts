@@ -2,6 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BookedItemsComponent } from './booked-items.component';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {Categories} from "../../models/categories.model";
+import {MaterialModule} from "../../../material/material.module";
 
 describe('BookedItemsComponent', () => {
   let component: BookedItemsComponent;
@@ -55,6 +56,7 @@ describe('BookedItemsComponent', () => {
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ BookedItemsComponent ],
+      imports: [MaterialModule],
       providers: [{ provide: MAT_DIALOG_DATA, useValue: {} },
         { provide: MatDialogRef, useValue: {close: ()=>{}}}]
     })

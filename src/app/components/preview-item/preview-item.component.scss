@@ -5,7 +5,8 @@
   &__detail{
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: inherit;
+    row-gap: 5px;
   }
   &__image{
     opacity: 1;

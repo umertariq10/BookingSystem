@@ -1,46 +1,23 @@
-<mat-drawer-container class="main-container">
-  <mat-drawer mode="side" opened class="main-container__drawer">
+<div>
+  <button
+    class="main-container__drawer--btn"
+    mat-button color="primary"
+    (click)="setActiveCategory.emit({name:'', id:'0'})"
+    [ngClass]="{'main-container__drawer--btn-selected': !activeCategory} "
+  >
+    Home
+  </button>
+  <div *ngFor="let category of categoryNames">
     <button
       class="main-container__drawer--btn"
       mat-button color="primary"
-      (click)="routing('')"
-      [ngClass]="{'main-container__drawer--btn-selected': isHome} "
+      (click)="setActiveCategory.emit(category)"
+      [ngClass]="{'main-container__drawer--btn-selected': activeCategory===category.name} "
     >
-      Home
+      {{category.name}}
     </button>
+  </div>
 
-    <button
-      class="main-container__drawer--btn"
-      mat-button color="primary"
-      (click)="routing('clothes')"
-      [ngClass]="{'main-container__drawer--btn-selected': isClothes} "
-    >
-      Clothes
-    </button>
-
-    <button
-      class="main-container__drawer--btn"
-      mat-button color="primary"
-      (click)="routing('shoes')"
-      [ngClass]="{'main-container__drawer--btn-selected': isShoes} "
-    >
-      Shoes
-    </button>
-
-  </mat-drawer>
-  <mat-drawer-content>
-    <app-home *ngIf="isHome">
-
-    </app-home>
-    <app-clothes *ngIf="isClothes"
-                 [isClothes]="isClothes">
-    </app-clothes>
-    <app-shoes *ngIf="isShoes"
-    >
-
-    </app-shoes>
-  </mat-drawer-content>
-</mat-drawer-container>
-
+</div>
 
 

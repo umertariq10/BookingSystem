@@ -1,17 +1,15 @@
 <div class="row">
-<div *ngFor = "let cloth of clothes" class="row__image-frame" [ngClass]="{'row__small-frame': !isClothes}">
-  <img class="row__image" [src] = cloth.imageUrl />
-  <div class="row__text-align">
-    <span class="material-icons row__text" (click)="openImagePreview(cloth)">
-preview
-</span>
+  <div *ngFor="let item of items" class="row__image-frame" [ngClass]="{'row__small-frame': true}">
+    <img class="row__image" [src]=item.imageUrl/>
+    <div class="row__text-align">
+    <span class="material-icons row__text" (click)="openImagePreview(item)">
+      preview
+    </span>
+      <!--    <span class="material-icons row__text" (click)="addItemToCart(item)">
+      add_shopping_cart
+      </span>-->
 
-    <span class="material-icons row__text" (click)="addItemToCart(cloth)">
-add_shopping_cart
-</span>
-
-
+    </div>
   </div>
-</div>
 
 </div>

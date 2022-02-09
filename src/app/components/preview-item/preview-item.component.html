@@ -1,6 +1,25 @@
-<div>
-<img class="frame__image" [src] = item.imageUrl />
-  <span class="frame__close-icon" (click)="close()" >
-<mat-icon > close</mat-icon>
+<div class="frame">
+  <img class="frame__image" [src]=item.imageUrl />
+  <div class="frame__detail">
+
+    <mat-toolbar>
+      <span>Category: {{item.category}}</span>
+    </mat-toolbar>
+    <mat-toolbar>
+      <span>Name: {{item.itemName}}</span>
+    </mat-toolbar>
+    <mat-toolbar>
+      <span>Item is Booked: {{item.isBooked}}</span>
+    </mat-toolbar>
+    <mat-toolbar>
+      <span>One day price: {{item.price}}</span>
+    </mat-toolbar>
+    <app-calender [date]="item.bookingDate" [isItemBooked]="item.isBooked" (dateEventEmitter)="updateBookingDate($event)"></app-calender>
+    <button mat-raised-button color="primary" *ngIf="item.isBooked"  (click)="editBooking()">Edit Booking</button>
+    <button *ngIf="!isCartPreview" [disabled]="item.isBooked" mat-raised-button color="primary" (click)="addItemToCart()">Add to Cart</button>
+    <button mat-raised-button color="primary" [disabled]="item.isBooked" (click)="bookItem()">Confirm Booking</button>
+  </div>
+  <span class="frame__close-icon" (click)="close()">
+<mat-icon> close</mat-icon>
     </span>
 </div>

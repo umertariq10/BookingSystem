@@ -6,7 +6,7 @@
       </button>
       <a href="#" mat-button>
         <mat-icon>add_shopping_cart</mat-icon>
-        Shop Now
+        Book Now
       </a>
       <span class="example-spacer"></span>
       <div fxShow="true" fxHide.lt-md="true" fxFlex fxLayoutAlign="flex-end center">
@@ -16,10 +16,10 @@
 
        </app-shopping-cart>
 
-        <a href="#" mat-button>
-          <mat-icon>message</mat-icon>
-          Messages
-        </a>
+        <button (click)="openBookingDialog()" mat-button>
+          <mat-icon>book</mat-icon>
+          Booked Items
+        </button>
         <a href="#" mat-button>
           <mat-icon>account_box</mat-icon>
           My Account
@@ -29,6 +29,7 @@
     </mat-toolbar-row>
   </mat-toolbar>
 
+<!--Mobile view bar-->
   <mat-sidenav-container fxFlexFill>
     <mat-sidenav #sidenav>
       <mat-nav-list>
@@ -51,8 +52,5 @@
         </a>
       </mat-nav-list>
     </mat-sidenav>
-  <!--App main Body-->
-    <app-side-navigation></app-side-navigation>
-
   </mat-sidenav-container>
 </div>

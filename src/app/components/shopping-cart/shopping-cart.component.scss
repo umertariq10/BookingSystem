@@ -1,7 +1,9 @@
 .cart {
   padding: 10px;
+
   &_items {
     display: flex;
+    text-align: center;
     align-items: center;
     justify-content: space-between;
 
@@ -21,11 +23,16 @@
       width: 50px;
     }
 
-
     &_item-quantity {
       padding-inline-start: 10px;
       padding-inline-end: 5px;
-  }
+    }
+
+    &_all-booked-btn {
+      display: flex;
+      justify-content: flex-end;
+    }
+
   }
 
 }

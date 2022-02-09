@@ -1,4 +1,10 @@
-<div class="slide-frame">
-<span class="slide-frame__frame"><app-shoes></app-shoes> </span>
-  <span class="slide-frame__frame"><app-clothes></app-clothes> </span>
+<div class="slide-frame" *ngFor="let category of categories">
+<span class="slide-frame__frame">
+ <mat-toolbar>
+  <span>{{category.name}}</span>
+</mat-toolbar>
+  <app-category-display [items]="category.items" [sliderImages]="category.sliderImage">
+  </app-category-display> </span>
 </div>
+
+

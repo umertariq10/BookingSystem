@@ -1,0 +1,25 @@
+<span class="frame__close-icon" (click)="close()">
+<mat-icon> close</mat-icon>
+    </span>
+<div class="frame">
+  <span class="cart" *ngIf="!bookedItems?.length">Nothing is booked!!</span>
+  <div *ngFor="let item of bookedItems" class="frame__container">
+    <img class="frame__image" [src]=item.imageUrl />
+    <div class="frame__detail">
+
+      <mat-toolbar>
+        <span>Name: {{item.itemName}}</span>
+      </mat-toolbar>
+
+      <mat-toolbar>
+        <span>Booked: from: {{item.bookingDate.start}} To: {{item.bookingDate.end}}</span>
+      </mat-toolbar>
+
+
+      <button mat-raised-button color="primary" (click)="cancelBooking(item)">cancel Booking</button>
+
+    </div>
+
+  </div>
+
+</div>

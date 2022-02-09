@@ -1,0 +1,12 @@
+<mat-drawer-container class="main-container">
+  <!--Side Navigation-->
+  <mat-drawer mode="side" opened class="main-container__drawer">
+    <app-side-navigation [categoryNames]="allCategoryName" [activeCategory]="activeCategory" (setActiveCategory)="setActiveCategory($event)"></app-side-navigation>
+  </mat-drawer>
+  <!--Body-Component-->
+  <mat-drawer-content>
+    <app-home [categories]="categories" *ngIf="!activeCategory"></app-home>
+    <app-category-display *ngIf="activeCategoryItems" [items]="activeCategoryItems"
+                          [sliderImages]="sliderImages"></app-category-display>
+  </mat-drawer-content>
+</mat-drawer-container>

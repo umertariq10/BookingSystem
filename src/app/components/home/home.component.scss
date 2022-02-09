@@ -1,8 +1,8 @@
 .slide-frame{
   display: flex;
   padding: 5px;
+  justify-content: center;
   &__frame{
-    width: 50%;
     padding: 5px;
   }
 }

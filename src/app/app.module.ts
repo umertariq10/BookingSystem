@@ -7,8 +7,6 @@ import { SideNavigationComponent } from './components/side-navigation/side-navig
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatNativeDateModule } from '@angular/material/core';
 import { MaterialModule } from '../material/material.module';
-import { ClothesComponent } from './components/clothes/clothes.component';
-import { ShoesComponent } from './components/shoes/shoes.component';
 import { TopNavigationComponent } from './components/top-navigation/top-navigation.component';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MainFrameComponent } from './components/main-frame/main-frame.component';
@@ -22,6 +20,16 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { ItemQuantityComponent } from './components/item-quantity/item-quantity.component';
+import { CategoryDisplayComponent } from './components/category-display/category-display.component';
+import { CalenderComponent } from './components/calender/calender.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {CategoriesService} from './service/categories.service';
+import {CartService} from "./service/cart.service";
+import {ItemService} from "./service/item.service";
+import { BookedItemsComponent } from './components/booked-items/booked-items.component';
+import { LandingComponent } from './components/landing/landing.component';
+import {BookedItemService} from "./service/booked-item.service";
+import {MatSnackBarModule} from "@angular/material/snack-bar";
 
 
 
@@ -30,8 +38,6 @@ import { ItemQuantityComponent } from './components/item-quantity/item-quantity.
   declarations: [
     AppComponent,
     SideNavigationComponent,
-    ClothesComponent,
-    ShoesComponent,
     TopNavigationComponent,
     MainFrameComponent,
     MainSliderComponent,
@@ -40,7 +46,11 @@ import { ItemQuantityComponent } from './components/item-quantity/item-quantity.
     PreviewItemComponent,
     ShoppingCartComponent,
     NotificationComponent,
-    ItemQuantityComponent
+    ItemQuantityComponent,
+    CategoryDisplayComponent,
+    CalenderComponent,
+    BookedItemsComponent,
+    LandingComponent
   ],
   imports: [
     BrowserModule,
@@ -52,6 +62,8 @@ import { ItemQuantityComponent } from './components/item-quantity/item-quantity.
     NgxPaginationModule,
     StoreModule.forRoot({}),
     MatCarouselModule.forRoot(),
+    ReactiveFormsModule,
+    MatSnackBarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

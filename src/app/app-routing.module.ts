@@ -1,26 +1,30 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import { ClothesComponent } from './components/clothes/clothes.component';
-import { ShoesComponent } from './components/shoes/shoes.component';
+
 import { MainFrameComponent } from './components/main-frame/main-frame.component';
+import {BookedItemsComponent} from './components/booked-items/booked-items.component';
+import {LandingComponent} from './components/landing/landing.component';
 
 const routes: Routes = [
   {path: '' , component: MainFrameComponent,
   children: [
-    {path: 'clothes',
-    component: ClothesComponent,
+    {path: '', redirectTo: 'landing', pathMatch: 'full'},
+    {path: 'landing', component: LandingComponent},
+    {path: 'booked-items' , component: BookedItemsComponent}
+   /* {path: 'vehicle',
+    component: VehicleComponent,
       data: {
-      isClothes: true,
+      isVehicle: true,
       }
     },
-    {path: 'shoes' ,
-      component: ShoesComponent,
+    {path: 'room' ,
+      component: RoomComponent,
       data: {
-        isShoes: true,
+        isRoom: true,
       }
-    }
+    }*/
     ]
-  }
+  },
 ];
 
 @NgModule({

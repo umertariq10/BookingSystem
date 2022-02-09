@@ -1,0 +1,14 @@
+<mat-form-field appearance="fill">
+  <mat-label>Enter a booking date</mat-label>
+  <mat-date-range-input [disabled]="isItemBooked" [formGroup]="dateFormGroup" [rangePicker]="picker">
+    <input matStartDate [min]="dateFormGroup.controls.start.value" formControlName="start"
+           (dateChange)="onDateChange()" placeholder="Start date">
+    <input matEndDate formControlName="end" (dateChange)="onDateChange()" [min]="dateFormGroup.controls.start.value"
+           placeholder="End date">
+  </mat-date-range-input>
+  <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+  <mat-date-range-picker #picker></mat-date-range-picker>
+
+  <mat-error *ngIf="dateFormGroup.controls.start.hasError('matStartDateInvalid')">Invalid start date</mat-error>
+  <mat-error *ngIf="dateFormGroup.controls.end.hasError('matEndDateInvalid')">Invalid end date</mat-error>
+</mat-form-field>

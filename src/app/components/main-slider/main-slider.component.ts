@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import {SliderImage} from "../../models/categories.model";
 
 
 
@@ -8,7 +9,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./main-slider.component.scss']
 })
 export class MainSliderComponent implements OnInit {
-  @Input()slides: any;
+  @Input()slides!: SliderImage[];
   constructor() {
   }
 

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { MainSliderComponent } from './main-slider.component';
+import {MaterialModule} from "../../../material/material.module";
 
 describe('MainSliderComponent', () => {
   let component: MainSliderComponent;
@@ -8,7 +8,10 @@ describe('MainSliderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ MainSliderComponent ]
+      declarations: [ MainSliderComponent ],
+      imports: [
+        MaterialModule,
+      ]
     })
     .compileComponents();
   });

@@ -3,6 +3,7 @@ import {DummyCategories} from "../../dumyData";
 import { ItemQuantityComponent } from './item-quantity.component';
 import {CartService} from "../../service/cart.service";
 import {Item} from "../../models/item.model";
+import {MaterialModule} from "../../../material/material.module";
 
 describe('ItemQuantityComponent', () => {
   let component: ItemQuantityComponent;

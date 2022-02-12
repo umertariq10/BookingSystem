@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { CategoryDisplayComponent } from './category-display.component';
-import {MaterialModule} from "../../../material/material.module";
+import {MaterialModule} from "../../../../material/material.module";
 
 describe('CategoryDisplayComponent', () => {
   let component: CategoryDisplayComponent;

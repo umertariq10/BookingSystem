@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { Item } from '../../models/item.model';
-import { PreviewItemComponent } from '../preview-item/preview-item.component';
+import { Item } from '../../bookingSystemComponents/models/item.model';
+import { PreviewItemComponent } from '../../bookingSystemComponents/components/preview-item/preview-item.component';
 import { MatDialog } from '@angular/material/dialog';
-import { CartService } from '../../service/cart.service';
-import {PreviewItem} from '../../models/preview-item.model';
-import {ItemSelection} from "../../models/item-selection-enum";
-import {Categories} from "../../models/categories.model";
-import {CategoriesService} from "../../service/categories.service";
+import { CartService } from '../../bookingSystemComponents/service/cart.service';
+import {PreviewItem} from '../../bookingSystemComponents/models/preview-item.model';
+import {ItemSelection} from "../../bookingSystemComponents/models/item-selection-enum";
+import {Categories} from "../../bookingSystemComponents/models/categories.model";
+import {CategoriesService} from "../../bookingSystemComponents/service/categories.service";
 
 @Component({
   selector: 'app-shopping-cart',

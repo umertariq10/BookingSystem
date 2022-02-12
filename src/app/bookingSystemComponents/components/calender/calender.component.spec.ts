@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { CalenderComponent } from './calender.component';
-import {MaterialModule} from "../../../material/material.module";
+import {MaterialModule} from "../../../../material/material.module";
 
 describe('CalenderComponent', () => {
   let component: CalenderComponent;

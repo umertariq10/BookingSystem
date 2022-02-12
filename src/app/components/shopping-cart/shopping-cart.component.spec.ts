@@ -1,13 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ShoppingCartComponent } from './shopping-cart.component';
 import {MatDialog} from "@angular/material/dialog";
-import {CategoriesService} from "../../service/categories.service";
-import {CartService} from "../../service/cart.service";
+import {CategoriesService} from "../../bookingSystemComponents/service/categories.service";
+import {CartService} from "../../bookingSystemComponents/service/cart.service";
 import {MaterialModule} from "../../../material/material.module";
 import {ReactiveFormsModule} from "@angular/forms";
 import {of} from "rxjs";
 import {DummyCategories} from "../../dumyData";
-import {Item} from "../../models/item.model";
+import {Item} from "../../bookingSystemComponents/models/item.model";
 
 describe('ShoppingCartComponent', () => {
   let component: ShoppingCartComponent;

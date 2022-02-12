@@ -1,9 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {MatDialog} from '@angular/material/dialog';
-import {BookedItemsComponent} from '../booked-items/booked-items.component';
+import {BookedItemsComponent} from '../../bookingSystemComponents/components/booked-items/booked-items.component';
 import {DummyCategories} from '../../dumyData';
-import {CategoriesService} from '../../service/categories.service';
-import {Categories} from '../../models/categories.model';
+import {CategoriesService} from '../../bookingSystemComponents/service/categories.service';
+import {Categories} from '../../bookingSystemComponents/models/categories.model';
 
 @Component({
   selector: 'app-top-navigation',

@@ -1,7 +1,7 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
-import {MaterialModule} from "../../../material/material.module";
+import {MaterialModule} from "../../../../material/material.module";
 import {MockComponent} from "ng2-mock-component";
 
 describe('HomeComponent', () => {

@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { TopNavigationComponent } from './top-navigation.component';
-import {BookedItemsComponent} from "../booked-items/booked-items.component";
+import {BookedItemsComponent} from "../../bookingSystemComponents/components/booked-items/booked-items.component";
 import {MatDialog} from "@angular/material/dialog";
-import {CategoriesService} from "../../service/categories.service";
+import {CategoriesService} from "../../bookingSystemComponents/service/categories.service";
 import {DummyCategories} from "../../dumyData"
 import {of} from "rxjs";
 

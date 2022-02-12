@@ -29,7 +29,7 @@ export class BookedItemsComponent implements OnInit {
     this.categoryService.updateCategories(this.allCategories, updatedItem);
   }
 
-  /** will filter and set booked item */
+  /** will filter and assign values to bookedItems */
   setBookedItems(allCategories: Categories[]): void{
      this.bookedItems = [];
     let filteredItem: Item[];

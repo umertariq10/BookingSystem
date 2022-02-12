@@ -2,7 +2,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BookedItemsComponent } from './booked-items.component';
 import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
 import {Categories} from "../../models/categories.model";
-import {MaterialModule} from "../../../material/material.module";
+import {MaterialModule} from "../../../../material/material.module";
 
 describe('BookedItemsComponent', () => {
   let component: BookedItemsComponent;
@@ -73,7 +73,7 @@ describe('BookedItemsComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should filter and set booked item  ', () => {
+  it('should filter booked Items and assign items to BookedItems', () => {
     const dummyData = component.allCategories = categories;
     component.setBookedItems(dummyData)
     expect(component.bookedItems.length).toEqual(2);

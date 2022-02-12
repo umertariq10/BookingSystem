@@ -1,9 +1,9 @@
 <mat-drawer-container class="main-container">
-  <!--Side Navigation-->
+  <!--Side Navigation of bookingSystem-->
   <mat-drawer mode="side" opened class="main-container__drawer">
     <app-side-navigation [categoryNames]="allCategoryName" [activeCategory]="activeCategory" (setActiveCategory)="setActiveCategory($event)"></app-side-navigation>
   </mat-drawer>
-  <!--Body-Component-->
+  <!--Content for each category of navigation--->
   <mat-drawer-content>
     <app-home [categories]="categories" *ngIf="!activeCategory"></app-home>
     <app-category-display *ngIf="activeCategoryItems" [items]="activeCategoryItems"

@@ -1,6 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { MainSliderComponent } from './main-slider.component';
-import {MaterialModule} from "../../../material/material.module";
+import {MaterialModule} from "../../../../material/material.module";
 
 describe('MainSliderComponent', () => {
   let component: MainSliderComponent;

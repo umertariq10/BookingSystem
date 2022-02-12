@@ -1,8 +1,8 @@
 import {Component, OnInit} from '@angular/core';
 
-import {Categories, SliderImage, UniqueCategory} from '../../models/categories.model';
-import {CategoriesService} from '../../service/categories.service';
-import {Item} from '../../models/item.model';
+import {Categories, SliderImage, UniqueCategory} from '../../bookingSystemComponents/models/categories.model';
+import {CategoriesService} from '../../bookingSystemComponents/service/categories.service';
+import {Item} from '../../bookingSystemComponents/models/item.model';
 
 @Component({
   selector: 'app-landing',

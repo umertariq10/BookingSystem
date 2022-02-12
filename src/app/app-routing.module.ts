@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 import { MainFrameComponent } from './components/main-frame/main-frame.component';
-import {BookedItemsComponent} from './components/booked-items/booked-items.component';
+import {BookedItemsComponent} from './bookingSystemComponents/components/booked-items/booked-items.component';
 import {LandingComponent} from './components/landing/landing.component';
 
 const routes: Routes = [
@@ -10,7 +10,7 @@ const routes: Routes = [
   children: [
     {path: '', redirectTo: 'landing', pathMatch: 'full'},
     {path: 'landing', component: LandingComponent},
-    {path: 'booked-items' , component: BookedItemsComponent}
+   /* {path: 'booked-items' , component: BookedItemsComponent}*/
    /* {path: 'vehicle',
     component: VehicleComponent,
       data: {
